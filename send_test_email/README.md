@@ -1,4 +1,3 @@
-   Send Test Email README body { font-family: Arial, sans-serif; }
 
 Send Test Email - Command Line Email Tool
 =========================================
