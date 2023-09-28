@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Test Email README</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Send Test Email - Command Line Email Tool</h1>
+
+<p>
+    Send Test Email is a Python-based command-line tool that allows users to easily send emails. It reads default configurations from a specified file and also allows users to input custom configurations via command-line arguments.
+</p>
+
+<h2>Features:</h2>
+
+<ul>
+    <li><strong>Ease of Use:</strong> Easily send emails directly from your terminal.</li>
+    <li><strong>Configurable:</strong> Reads default settings from a configuration file but also allows custom configurations via command-line arguments.</li>
+    <li><strong>Support for Text and HTML:</strong> Send plain text emails, HTML emails, or both.</li>
+</ul>
+
+<h2>Installation:</h2>
+
+<h3>1. Clone the Repository:</h3>
+
+<pre><code>
+git clone https://github.com/yourusername/send_test_email.git
+cd send_test_email
+</code></pre>
+
+<p>Replace 'yourusername' with your actual GitHub username and 'send_test_email.git' with your actual repository name if you have hosted the script on GitHub.</p>
+
+<h3>2. Install Dependencies:</h3>
+
+<p>Make sure you have Python installed on your machine. Install the dependencies using pip:</p>
+
+<pre><code>
+pip install -r requirements.txt
+</code></pre>
+
+<p>If you haven’t already created a <code>requirements.txt</code> file, create one with the following content:</p>
+
+<pre><code>
+python-dotenv
+python-xdg
+pyinstaller  <!-- Optional: if you want to convert the script to a standalone executable -->
+</code></pre>
+
+<h3>3. Configuration:</h3>
+
+<p>Create a <code>send_test_email.conf</code> in your XDG config directory and provide the default settings:</p>
+
+<pre><code>
+[DEFAULTS]
+sender_email = your_sender_email@gmail.com
+smtp_server = smtp.gmail.com
+smtp_port = 587
+username = your_sender_email@gmail.com
+password = your_email_password
+</code></pre>
+
+<p>Replace the placeholders with your actual information.</p>
+
+<h2>Usage:</h2>
+
+<h3>Send an Email:</h3>
+
+<p>You can use the script to send an email with the command below:</p>
+
+<pre><code>
+python send_test_email.py receiver_email subject --body "Your email body here"
+</code></pre>
+
+<p>Or provide a text or HTML file for the body content:</p>
+
+<pre><code>
+python send_test_email.py receiver_email subject --txt_file "path_to_text_file"
+</code></pre>
+
+<pre><code>
+python send_test_email.py receiver_email subject --html_file "path_to_html_file"
+</code></pre>
+
+<h3>Compile to an Executable:</h3>
+
+<p>If you want a standalone executable, use PyInstaller:</p>
+
+<pre><code>
+pyinstaller --onefile send_test_email.py
+</code></pre>
+
+<p>The executable will be found in the <code>dist</code> folder.</p>
+
+<h2>Contributing:</h2>
+
+<p>Feel free to fork the project, open a pull request, or report any issues you encounter.</p>
+
+<h2>License:</h2>
+
+<p>This project is open source and available under the <a href="LICENSE" target="_blank">MIT License</a>.</p>
+
+</body>
+</html>

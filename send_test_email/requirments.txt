@@ -1,0 +1,3 @@
+python-dotenv
+python-xdg
+pyinstaller  # If you want to convert the script to a standalone executable
